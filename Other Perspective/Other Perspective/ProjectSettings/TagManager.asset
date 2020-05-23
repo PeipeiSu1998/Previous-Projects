@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - 3
+  - 2
+  - 1
+  - projectile
+  - FxTemporaire
+  - Glass
+  - Lefty
+  - Righty
+  - Tritanopia
+  - Protanopia
+  - Deuteranopia
+  - TP1
+  - TP2
+  - TP3
+  - TP4
+  - Instalation
+  - Button
+  - DeleteButton
+  - ResetButton
+  - Shades
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Key
+  - KeyBox
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: UI
+    uniqueID: 3924791037
+    locked: 0
+  - name: Environment
+    uniqueID: 786017849
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

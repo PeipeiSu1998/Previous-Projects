@@ -1,0 +1,9 @@
+1. Players will be placed in the room
+2. Players have to find the note which is hidden in the bookshelf, the note will tell players the corresponding number of each shape
+3. Players keep the note in mind and close it
+4. Players look at those colorful shape which is floating at the corner
+(ps. the difference between easy level and hard level, could be done by either change the position of tables in front of those shapes, which are used to prevent players standing too close to those shapes, or change the ambiguity of players' "eyes")
+5. Players decrypt those shapes to be a sentence of password
+6. Players find the door lock at the wall
+7. Players enter password
+8. Door open, now the player can escape successfully
