@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Client</name>
+    </assembly>
+    <members>
+        <member name="T:Client.Controller.CommunicationController">
+            <summary>
+            This is a sealed thread safe singleton class. It can not be inherited from.
+            </summary>
+        </member>
+        <member name="M:Client.Controller.CommunicationController.GetLocalIPAddress">
+            <summary>
+            This method is getting local addres from the client computer
+            </summary>
+        </member>
+        <member name="M:Client.Controller.CommunicationController.Setup">
+            <summary>
+            This method creates socket connection on chosen port(in our case 4400)
+            </summary>
+        </member>
+        <member name="M:Client.Controller.CommunicationController.ReadReplyMessage">
+            <summary>
+            This method is converting ASCII bytes to string
+            </summary>
+        </member>
+        <member name="M:Client.Controller.CommunicationController.SendMessage(System.String)">
+            <summary>
+            This method is sending ASCII bytes with the header byte giving the length of the message
+            </summary>
+        </member>
+        <member name="M:Client.Controller.CompanyController.registerCompany(Client.Model.Company)">
+            <summary>
+            Takes a company object, converts it into JSON and sends it to the java server. Expect a server reply used for tests.
+            </summary>
+            <param name="company"></param>
+        </member>
+        <member name="M:Client.CreateEditPallet.ButtonCreatePallet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that managing the click event of create pallet button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.CreateEditPallet.ButtonUpdatePallet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that managing the click event of update pallet button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.CreateEditPallet.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.CreateEditPallet.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.CreateEditPallet.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Client.EditCompany.ButtonSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that managing the click event of saving company information's button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.EditCompany.ButtonCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that managing the click event of canceling the inputted company information
+            but without deleting the current company's information from server side
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.EditCompany.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.EditCompany.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.EditCompany.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Client.ListAdapter.GetAdaptedAllCompanyList(Client.Model.CompanyList)">
+            <summary>
+            Method for converting a company list object to a string list
+            so that the list contains all items in the location list object
+            </summary>
+            <param name="companyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Client.ListAdapter.GetAdaptedAvailableLocationsList(Client.Controller.LocationList)">
+            <summary>
+            Method for converting a location list object to a string list
+            so that the list contains all items in the location list object
+            </summary>
+            <param name="locationList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Client.ListAdapter.GetAdaptedRentedLocationsList(Client.Controller.LocationList)">
+            <summary>
+            Method for converting a rented location list object to a string list
+            so that the list contains all items in the location list object
+            </summary>
+            <param name="locationList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Client.ListAdapter.GetAdaptedAllPalletsList(Client.Controller.PalletList)">
+            <summary>
+            Method for converting pallet list object to be a string list
+            so that the list contains all items in the pallet list object
+            </summary>
+            <param name="palletList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Client.ManageLocations.#ctor">
+            <summary>
+            Method for initializing the manage location form
+            </summary>
+        </member>
+        <member name="M:Client.ManageLocations.ButtonFindCompanyLocations_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of find company's locations' button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.ManageLocations.ButtonRentLocation_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of renting a location to a company
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.ManageLocations.ButtonUnRentLocation_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of the button for removing a location from the current company
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.ManageLocations.ButtonViewAvailableLocations_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of viewing all available locations' button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.ManageLocations.updateRentedLocationsListView">
+            <summary>
+            Method that handling the click event of updating rented location list view's button
+            </summary>
+        </member>
+        <member name="M:Client.ManageLocations.updateAvailableLocationsListView">
+            <summary>
+            Method that handling the click event of updating available location list view's button
+            </summary>
+        </member>
+        <member name="M:Client.ManageLocations.paintLocationListRows">
+            <summary>
+            Method that handling the click event of painting rows in list view for locations' button
+            </summary>
+        </member>
+        <member name="F:Client.ManageLocations.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.ManageLocations.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.ManageLocations.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.#ctor">
+            <summary>
+            Method for initializing and openning the main form
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.ButtonSearchCompany_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of search company button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.ButtonViewAllCompanies_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of viewing all companies button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.ButtonSearchPallet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of searching pallet button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.ButtonViewAll_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of viewing all available pallet button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.ButtonViewAllAvalableLocations_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of viewing all available location button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.RegisterToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Used when the "Register" tool strip item from "Company" is clicked to open a new form for company registration.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.EditDetailsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of editing company information button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.ManageLocationsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of editing location information button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.InsertToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of inserting pallet button with its information
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.RemoveToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of removing a pallet from the server
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.MainForm.updateCompanyListView">
+            <summary>
+            Method for updating company list view
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.updatePalletListView">
+            <summary>
+            Method for updating pallet list view
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.updateAvailableLocationListView">
+            <summary>
+            Method for updating location list view
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.paintCompanyRows">
+             <summary>
+            Method for painting rows in list view for companies
+             </summary>
+        </member>
+        <member name="M:Client.MainForm.paintPalletRows">
+            <summary>
+            Method for painting rows in list view for pallets
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.paintLocationRows">
+            <summary>
+            Method painting rows in list view for locations
+            </summary>
+        </member>
+        <member name="F:Client.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Client.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:Client.TheMainForm.#ctor">
+             <summary>
+            Method for initializing the form of registering company
+             </summary>
+        </member>
+        <member name="M:Client.TheMainForm.ButtonCreate_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of createing company's button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.TheMainForm.ButtonCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of cancelling inputted company information's button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.TheMainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.TheMainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.TheMainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Client.ReleasePallet.#ctor">
+            <summary>
+            Method that initializing the release pallet's view
+            </summary>
+        </member>
+        <member name="M:Client.ReleasePallet.ButtonReleasePallet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of releasing pallet's button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Client.ReleasePallet.ButtonCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method that handling the click event of cancelling inputted pallet information's button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Client.ReleasePallet.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Client.ReleasePallet.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Client.ReleasePallet.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Client.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Client.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Client.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,34 @@
+﻿@page
+@model Kommunity_WebApp.Pages.News.eventsModel
+@{
+    ViewData["Title"] = "events";
+}
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-12">
+            <br />
+            <br />
+            <h1>Events</h1>
+            <!-- Blog Post -->
+            @foreach (var item in Model.events)
+            {
+                <div class="card mb-4">
+                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title">@item.type</h2>
+                        <h4 class="card-title">@item.city</h4>
+                        <p class="card-text">@item.content</p> <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted"> Posted on @item.city by <a href="#">@item.creator.name</a> </div>
+                </div>
+            }
+           
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item"> <a class="page-link" href="#">&larr; Older</a> </li>
+                <li class="page-item disabled"> <a class="page-link" href="#">Newer &rarr;</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+create table UserDetails (cpr text primary key,password text,name text, email text,role text, city text);
+create table Post(pid serial primary key,title text, creator text references UserDetails(cpr),content text,type text,pdate text,city text);
+create table Petition(peid serial primary key,title text,creator text references UserDetails(cpr),pedate text ,content text,approved boolean);
+create table Vote(vid serial primary key, voter text references UserDetails(cpr),peid int references Petition(peid));
+create table Message(mid serial primary key, senderid text references UserDetails(cpr),text date,mtext text);
+create table Inbox(inId  serial primary key,Rcpr text references UserDetails(cpr),mid int references Message(mid));	
+

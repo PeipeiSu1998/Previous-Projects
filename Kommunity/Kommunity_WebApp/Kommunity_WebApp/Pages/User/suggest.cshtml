@@ -1,0 +1,33 @@
+﻿@page
+@model Kommunity_WebApp.Pages.User.suggestModel
+@{
+    ViewData["Title"] = "suggest";
+}
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-12">
+            <br /> <br />
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Suggest a poll</h2>
+                    <form asp-page-handler="MakePetition" method="Post">
+                        <div class="form-group">
+                            <label>Question text</label>
+                            <input asp-for="@Model.postData.Content"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- /.row -->
+</div> <br /><br /><br /><br />

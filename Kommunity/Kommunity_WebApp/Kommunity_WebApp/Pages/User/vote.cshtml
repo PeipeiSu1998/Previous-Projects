@@ -1,0 +1,38 @@
+﻿@page
+@model Kommunity_WebApp.Pages.User.voteModel
+@{
+    ViewData["Title"] = "vote";
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-12">
+            <br /> <br />
+            <!-- Blog Post -->
+            @foreach (var item in Model.petitions)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form asp-page-handler="Vote(@item)" method="post" >
+                            <h2 class="card-title">@item.date</h2>
+                            <p class="card-text">@item.content</p>
+                            <input class="btn btn-primary" type="submit" value="I like this idea">
+                        </form>
+                    </div>
+
+                </div>
+
+            }
+
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item"> <a class="page-link" href="#">&larr; Older</a> </li>
+                <li class="page-item disabled"> <a class="page-link" href="#">Newer &rarr;</a> </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>

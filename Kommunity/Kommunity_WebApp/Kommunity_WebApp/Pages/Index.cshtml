@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    Layout = "_Login";
+}
+
+<div id="header">
+    <img src="~/images/logo.png" style="height:160px;">
+</div>
+
+<div class="login-wrap">
+
+    <div class="login-html">
+
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+
+            <div class="sign-in-htm">
+                <form asp-page-handler="Login" method="Post">
+                    <div asp-validation-summary="All">
+                        <div class="group">
+                            <label for="user" class="label">CPR</label>
+                            <input asp-for="loginData.cpr" id="user" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input asp-for="loginData.Password" id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input asp-for="loginData.RememberMe" id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input id="login" type="submit" class="button" value="Login" style="color: white;">
+                        </div>
+
+                    </div>
+                    @Html.AntiForgeryToken()
+                </form>
+
+            </div>
+
+            <div class="sign-up-htm">
+                <form asp-page-handler="Signup" method="Post">
+                    <div asp-validation-summary="All">
+                        <div class="group">
+                            <label for="user" class="label">CPR</label>
+                            <input asp-for="signupData.cpr" id="user" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input asp-for="signupData.Password" id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Repeat Password</label>
+                            <input asp-for="signupData.RepetePassword" id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">City</label>
+                            <input asp-for="signupData.City" id="pass" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up" style="color: white;">
+                        </div>
+                    </div>
+                    
+                    @Html.AntiForgeryToken()
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

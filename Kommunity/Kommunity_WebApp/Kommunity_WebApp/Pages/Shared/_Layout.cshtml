@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kommunity</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css" /> </head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/editor.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#txtEditor").Editor();
+        });
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #93cec0">
+        <div class="container">
+            <a class="navbar-brand" href="../User/userindex.html"><img class="img-responsive" src="~/images/logo.png" style="height: 70px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="btn-group" role="group"> <a class="btn btn-secondary dropdown-toggle" href="userindex.html" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                            <div class="dropdown-menu" aria-labelledby="News"> <a class="dropdown-item" href="../News/events">Events</a> <a class="dropdown-item" href="../News/job">Jobs</a> <a class="dropdown-item" href="../News/traffic">Traffic</a> <a class="dropdown-item" href="../News/infra">Infrastructure</a> <a class="dropdown-item" href="../News/food">Food</a>
+                                <div class="dropdown-divider"></div> <a class="dropdown-item" href="../News/post">Post</a> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group" role="group"> <a class="btn btn-secondary dropdown-toggle" href="vote.html" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vote</a>
+                            <div class="dropdown-menu" aria-labelledby="Vote"> <a class="dropdown-item" href="vote">Vote</a> <a class="dropdown-item" href="suggest">Suggest</a> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group" role="group">
+                            <button id="buysell" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"> Buy & Sell </button>
+                            <div class="dropdown-menu" aria-labelledby="buysell"> <a class="dropdown-item" href="buy">Buy</a> <a class="dropdown-item" href="sell">Sell</a> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group" role="group">
+                            <button id="account" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal</button>
+                            <div class="dropdown-menu" aria-labelledby="account"> <a class="dropdown-item" href="messages">Messages</a> <a class="dropdown-item" href="settings">Settings</a>
+                                <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Log out</a> </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..."> <span class="input-group-btn">
+                        <button class="btn btn-search" type="button">Go!</button>
+                    </span> </div>
+            </div>
+        </div>
+    </nav>
+    <partial name="_CookieConsentPartial" /> @RenderBody()
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Kommunity 2018</p>
+        </div>
+    </footer>
+    <environment include="Development">
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.js/jquery.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+</body>
+
+</html>

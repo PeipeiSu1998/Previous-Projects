@@ -1,0 +1,88 @@
+﻿@page
+@model Kommunity_WebApp.Pages.User.sellModel
+@{
+    ViewData["Title"] = "sell";
+}
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-12">
+            <br /> <br />
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Sell something</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input class="form-control" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <div class="form-row">
+                                <div class="col-4">
+                                    <input type="text" class="form-control" placeholder="Amount">
+                                </div>
+
+                                <div class="col" style="padding: 7px;">
+                                    kr.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Photos</label>
+                            <div class="controls">
+
+                                <div class="entry input-group col-xs-3">
+
+
+                                    <input class="btn" name="fields[]" type="file">
+                                    <span class="input-group-btn">
+                                        <button class="btn add-more" type="button">+ </button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+        $(function () {
+            $(document).on('click', '.add-more', function (e) {
+                e.preventDefault();
+
+                var controlForm = $('.controls:first'),
+                    currentEntry = $(this).parents('.entry:first'),
+                    newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+                newEntry.find('input').val('');
+                controlForm.find('.entry:not(:last) .btn-add')
+                    .removeClass('btn-add').addClass('btn-remove')
+                    .removeClass('btn-success').addClass('btn-danger')
+                    .html('<span class="glyphicon glyphicon-minus"></span>');
+            }).on('click', '.btn-remove', function (e) {
+                $(this).parents('.entry:first').remove();
+
+                e.preventDefault();
+                return false;
+            });
+        });</script>
+    <!-- /.row -->
+</div> <br /><br /><br /

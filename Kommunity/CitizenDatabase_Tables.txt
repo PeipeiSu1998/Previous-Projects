@@ -1,0 +1,8 @@
+create table Citizens (cpr text primary key );
+
+insert into  Citizens(cpr) values('1207883009');
+insert into  Citizens(cpr) values('1105823019');
+insert into  Citizens(cpr) values('2201413223');
+insert into  Citizens(cpr) values('1007912211');
+insert into  Citizens(cpr) values('1505772008');
+insert into  Citizens(cpr) values('2107811009');
