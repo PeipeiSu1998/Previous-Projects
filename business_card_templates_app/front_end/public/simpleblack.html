@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>React App</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <style>
+    html, body {
+    min-height: 100%;
+    }
+    body, div, form, input{ 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #eee;
+    }
+    body {
+    background-image: url("/img/write-593333_1920.jpg");
+    background-size: cover;
+    }
+    h2 {
+    text-transform: uppercase;
+    margin: 0 0 0 8px;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    font-size: 23px;
+    }
+    .container {
+    background: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 25px;
+    flex-direction: row;
+    height: calc(100% - 50px);
+    }
+    .left-part, form {
+    padding: 25px;
+    margin-right: 10px;
+    flex: 1;
+    }
+    .left-part {
+    text-align: center;
+    background-image: url("/img/simpleblack.png");
+
+    }
+
+    form {
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 15%;
+    margin-left: 10px;
+    }
+    .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    .info {
+    display: flex;
+    flex-direction: column;
+    }
+    input {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    }
+    input::placeholder {
+    color: #eee;
+    font-family: 'Trebuchet MS';
+    font-style: italic;
+    font-size: 20px;
+    }
+
+    button {
+    padding: 10px 5px;
+    margin-top: 5px;
+    border-radius: 50px; 
+    border: none;
+    background:#eee; 
+    text-decoration: none;
+    font-family: 'georgia';
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    width: 35%;
+    }
+
+    button:hover {
+    background: #d9d9d9;
+    }
+
+    @media (min-width: 568px) {
+    html, body {
+    height: 100%;
+    }
+    
+    footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+.companyname{
+  color: #fff;
+  font-family: 'Stencil Std';
+}
+.name, .officeaddress, .email, .phonenumber{
+  color: #222;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0 0 0 0px;
+  font-size: 150%;
+}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-part" class="col-sm-12">
+    
+      <h1 class="companyname">Company Name</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3 class="name">Full Name</h3>
+      <br>
+      <h3 class="officeaddress">Office Address</h2>
+      <br>
+      <h3 class="email">Email</h3>
+      <br>
+      <h3 class="phonenumber">Phoner Number</h3>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      
+    </div>
+    <form action="/" class="col-sm-12">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i> 
+        <h2>Create your visiting card with information:</h2>
+      </div>
+      <div class="info">
+        <input id="companyname" type="text" name="companyname" placeholder="Company name" onChange="formToCardCompanyName()" >
+        <input class="fname" type="text" name="name" placeholder="Full name" onChange="formToCardName()" >
+        <input id="officeaddress" type="text" name="officeaddress" placeholder="Office address" onChange="formToCardAddress()">
+        <input id="email" type="text" name="name" placeholder="Email" onChange="formToCardEmail()">
+        <input id="phonenumber" type="text" name="name" placeholder="Phone number" onChange="formToCardPhone()">
+      </div>
+      <button type="submit" href="/coldblue.html" onclick="takeScreenShot()">← Download the card</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Created and drew by Peipei Su, backgroud image is taken from Pixaby.com</p>
+  </footer>
+  <script src="templates.js"></script>
+</body>
+</html>
+
