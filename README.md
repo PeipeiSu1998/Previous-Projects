@@ -1,5 +1,7 @@
 # Previous-Projects
 
+ChessWarz - Bachelor project collaborating with the LEGO Group. It's a VR chess game using LEGO's model and it was developed in Unity.
+
 WME - C# for front-end, PostgreSQL as back-end, Java as the agent coding
 
 Kommunity - C# with .NET as the front-end, PostgreSQL as back-end, Java as the agent coding
